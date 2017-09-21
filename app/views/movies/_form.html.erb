@@ -1,0 +1,54 @@
+<%= form_for @movie, html: { multipart: true } do |f| %>
+  
+    <% if @movie.errors.any? %>
+    <div id="error_explanation">
+
+      <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class = 'form' >
+  <div class="field">
+    <p>*<%= t('title') %></p>
+    <%= f.text_field :title%>
+  </div>
+
+  <div class="field" id="text">
+    <p>*<%= t('description') %></p>
+    <%= f.text_area :descroption%>
+  </div>
+
+  <div class="field" >
+    <p>*<%= t('running_time') %></p>
+    <%= f.text_field :movie_length %>
+  </div>
+
+  <div class="field">
+    <p>*<%= t('directed_by') %></p>
+    <%= f.text_field :director %>
+  </div>
+
+  <div class="field">
+    <p>*<%= t('rating') %></p>
+    <%= f.text_field :rating %>
+  </div>
+
+    <div class="field">
+    <p><%= t('trailer_src') %></p>
+    <%= f.text_field :trailer %>
+  </div>
+
+    <div class="field">
+    <p>*<%= t('image') %></p>
+    <%= f.file_field :image %>
+  </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit submit_text %>
+  </div>
+<% end %>

@@ -1,0 +1,79 @@
+ru-RU:
+  #movie_form
+  title: 'Название'
+  description: "Описание"
+  running_time: "Длительность"
+  directed_by: "Режисер"
+  rating: "Рейтинг"
+  trailer_src: "Ссылка на трейлер"
+  image: "Постер"
+
+
+  new_movie: "Новый фильм"
+  back: 'Назад'
+  create_movie: 'Создать фильм'
+  title: 'Название'
+
+  twitter: 'Твиттер'
+  dima_lipko: 'Липко Дмитрий'
+  movies: 'Фильмы'
+  create_post: "Добавить фильм"
+  edit_user: 'Профиль'
+  log_out: 'Выйти'
+  log_in: 'Войти'
+  watch_it: 'Стоит посмотреть'
+  desires: ''
+
+  comment: 'Коментарий'
+  new_review: 'Новый комментарий'
+  create_review: "Добавить"
+  edit_review: "Редактировать"
+  destroy_review: 'Удалить'
+  back: 'Назад'
+  reviews: 'комментария(-ев)'
+  write_review: 'Прокомментировать'
+  no_reviews: 'Комментариев еще нет. Хотите добавить первый?'
+  edit_movie: 'Редактировать'
+  destroy_movie: 'Удалить'
+
+  forgot_password: 'Забыли пароль?'
+  sign_up: 'Регистрация'
+
+  remember_me: 'Запомнить меня'
+  ladder_articles_base: 'Большая База Статей'
+  leave: 'Выйти'
+  home_page: 'Домашняя страница'
+  new_article: 'Новая статья'
+  articles: 'Статьи'
+  are_you_sure: 'Вы уверены?'
+  update: 'Обновить'
+  create: 'Создать'
+  edit: 'Изменить'
+  sign_up: 'Регистрация'
+  edit_info: 'Редактирование профиля'
+  sign_in: 'Вход'
+  edit_article: 'Редактирование статьи'
+  back: 'Назад'
+  all_users: 'Пользователи'
+  page_of: 'Страница'
+  answered: 'ответил'
+  add_comment: 'Напишите комментарий'
+  ladder_work: 'Зачётная Работа'
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: 'слишком короткий'
+              blank: 'не может быть пустым'
+            password_confirmation:
+              confirmation: 'не пройдено'
+            current_password:
+              blank: 'не подтверждён'
+              invalid: 'не подтверждён'
+            email:
+                taken: 'уже зарегистрирован'
+                blank: 'не введён'
+
+

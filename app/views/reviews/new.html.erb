@@ -1,0 +1,8 @@
+<div class = 'form' >
+<h1><%= t('new_review') %></h1>
+
+<%= render 'form', submit_text: t('create_review'), review: @review %>
+
+<%= link_to t('back'),  movie_path(@movie) %>
+
+</div>

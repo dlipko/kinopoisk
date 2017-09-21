@@ -1,0 +1,82 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  twitter: 'Twitter'
+  dima_lipko: 'Lipko Dima'
+  movies: 'Movies'
+  create_post: "Create post"
+  edit_user: 'Edit user'
+  log_out: 'Log out'
+  log_in: 'Log in'
+  watch_it: 'Watch it'
+  new_movie: "New Movie"
+  desires: 'We know your desires'
+  
+  back: 'Back'
+  create_movie: 'Create movie'
+
+  title: 'Title'
+  description: "Description"
+  running_time: "Running time"
+  directed_by: "Directed by"
+  rating: "Rating"
+  trailer_src: "Trailer src"
+  image: "Image"
+
+  comment: 'Comment'
+  new_review: 'New review'
+  create_review: 'Create'
+  edit_review: 'Edit'
+  destroy_review: 'Destroy'
+  back: 'Back'
+  reviews: 'reviews'
+  write_review: 'Write a review'
+  no_reviews: 'No rviews yet, would you like to be the first'
+  destroy_movie: 'Destroy'
+  edit_movie: 'Edit'
+
+  forgot_password: 'Forgot your password?'
+  sign_up: 'Sign up'
+
+  remember_me: 'Remember me'
+  ladder_articles_base: 'Ladder Articles Base'
+  leave: 'Leave'
+  home_page: 'Home Page'
+  new_article: 'New Article'
+  articles: 'Articles'
+  destroy: 'Destroy'
+  are_you_sure: 'Are you sure?'
+  update: 'Update'
+  create: 'Create'
+  edit: 'Edit'
+  sign_up: 'Sign Up'
+  edit_info: 'Info Edit'
+  sign_in: 'Sign In'
+  edit_article: 'Edit Article'
+  back: 'Back'
+  all_users: 'All Users'
+  page_of: 'Page of'
+  answered: 'answered'
+  add_comment: 'Write a comment'
+  ladder_work: 'Ladder Work'
+
+  resend_confirmation_instructions: 'Resend confirmation instructions'

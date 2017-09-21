@@ -1,0 +1,85 @@
+    <div class="top-border"></div>
+
+      <div class="row">
+        <div class="small-12 medium-12 large-12 small-centered columns">
+          <header>    
+            <h1><%= t('watch_it') %></h1>
+            <h2><%= t('desires') %></h2>
+          </header>
+        </div>
+
+       <div class="small-12 medium-12 large-12 small-centered columns">
+        <nav>
+          <ul class="inline-list-custom">
+            <li><a><%= link_to t('movies'), movies_path%></a></li>
+            <% if current_user.id == @movie.user_id %>
+              <li><%= link_to t('edit_movie'), edit_movie_path(@movie) %></li>
+              <li><%= link_to t('destroy_movie'), @movie, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            <% end %>            
+            <li><a><%= link_to t('log_out'), destroy_user_session_path, method: 'delete' %></a></li> 
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+      <div class="small-12 medium-7 large-7 columns">
+        <h2><%= @movie.title %></h2>
+        <hr>
+        <p><%= @movie.descroption %></p> 
+        <hr>
+        <div class='video'>
+          <% unless @movie.trailer == nil %>
+            <iframe width="560" height="315" allowfullscreen src= <%= @movie.trailer %> ></iframe>
+          <% end %>
+        </div>
+
+        <hr>
+         <h3><%= link_to t('write_review'), new_movie_review_path(@movie) %><h3>
+        <hr>
+
+        <% if @reviews.blank? %>
+          <h3><%= t('no_reviews') %></h3>
+        <% else %>
+         
+          <% @reviews.reverse.each do |review| %>
+            <div class="reviews">
+              <p><%= 'From: '+ User.find(review.user_id).email %></p>
+              <p><%= review.comment %></p>
+              
+              <table>
+                <% if current_user.id == review.user_id %>
+                  <tr><a><%= link_to t('edit_review'), '/movies/' + @movie.id.to_s+'/reviews/'+review.id.to_s+'/edit' %></a></tr>
+                  </tr>  |  </tr>
+                  <tr><a><%= link_to t('destroy_review'),  '/movies/' + @movie.id.to_s+'/reviews/'+review.id.to_s, method: :delete, data: { confirm: 'Are you sure?' } %></a></tr>
+                <% end %>
+              </table>
+
+            </div>
+             <hr>
+          <% end %>
+        <%end %> 
+        
+      </div>
+
+ 
+      <div class="small-12 medium-5 large-5 columns">
+        <p>
+          <%= image_tag @movie.image.url(:medium) %>
+        </p>
+        <div class="lined-list">
+          <ul>
+            <li><strong><%= t('title') %>:</strong> <%= @movie.title %></li>
+            <li><strong><%= t('directed_by') %>:</strong> <%= @movie.director %></li>
+            <li><strong><%= t('running_time') %>:</strong> <%= @movie.movie_length %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+

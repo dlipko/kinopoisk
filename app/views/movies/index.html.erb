@@ -1,0 +1,63 @@
+    <div class="top-border"></div>
+
+      <div class="row">
+        <div class="small-12 medium-12 large-12 small-centered columns">
+          <header>    
+            <h1><%= t('watch_it') %></h1>
+            <h2><%= t('desires') %></h2>
+          </header>
+        </div>
+
+       <div class="small-12 medium-12 large-12 small-centered columns">
+        <nav>
+          <ul class="inline-list-custom">
+            
+            <% if current_user == nil %>
+              <li><a href='/users/sign_in'><%= t('log_in') %></a></li>
+            <% else %>
+              <li><a><%= link_to t('movies'), movies_path%></a></li>
+              <li><a><%= link_to t('create_post'),  new_movie_path%></a></li>
+              <li><a><%= link_to t('edit_user'), edit_user_registration_path %></a></li>
+              <li><a><%= link_to t('log_out'), destroy_user_session_path, method: 'delete'%></a></li> 
+            
+            <% end %> 
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+  <div class="small-12 medium-12 large-12 columns">
+    <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 inline-list-custom">
+      
+      
+
+    <% if @movies.blank? %>
+      <h2><%= 'There is now movies. Would you like to add the first?' %></h2>
+      <h3><%= link_to 'Create post',  new_movie_path%></h3>
+
+    <%else %>
+      <% @movies.each do |movie| %>
+      <li>
+        <div class="thumbnail">
+          <div class="thumbnail-img">
+            <div class="thumbnail-hover"><a href="project-01.html"></a></div>
+            <a href = <%= '/movies/'+ movie.id.to_s %> > <%= image_tag movie.image.url(:medium), {height: 200} %></a>
+          </div>
+          <div class="thumbnail-caption"><a class="caption-link" href=<%= '/movies/'+ movie.id.to_s %> ><%= movie.title %></a></div>
+        </div>
+      </li>
+      <% end %>
+    <% end %>
+            
+    
+    </ul>
+  </div>
+</div>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/hawthorne.js"></script>
+
